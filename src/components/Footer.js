@@ -2,7 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='b2'>Footer</div>
+    <footer className='footer d-flex flex-row align-items-center justify-content-center p-20'>
+      <p>Copyright © 2022 CookChef , Inc.</p>
+    </footer>
   )
 }
 
