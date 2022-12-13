@@ -1,5 +1,7 @@
+
+
 .b1{
-    background-color: red ;
+    background-color: red;
     border: 1px solid red;
 }
 .b2{
@@ -13,4 +15,35 @@
 .b4{
     background-color: purple ;
     border: 1px solid purple;
+}
+
+.xs {
+  @media screen and (max-width: 576px){
+      border: 2px solid red;
+    }
+  }
+
+.sm{
+  @media screen and(min-width: 577px) and (max-width: 768px) {
+    border: 2px solid green;
+  }
+}
+
+.md{
+  @media screen and(min-width: 769px) and (max-width: 992px) {
+    border: 2px solid blue;
+  }
+}
+    
+.md-lt{
+  @media screen and(max-width: 992px)
+  {
+    border: 2px solid orange;
+  }
+}
+
+.xl{
+  @media screen and(min-width: 1201px){
+    border: 2px solid purple;
+  }
 }

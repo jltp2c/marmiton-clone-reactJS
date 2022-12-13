@@ -57,6 +57,10 @@
   margin: 20px;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -94,26 +98,6 @@
 
 .align-items-center {
   align-items: center;
-}
-
-.b1 {
-  background-color: red;
-  border: 1px solid red;
-}
-
-.b2 {
-  background-color: green;
-  border: 1px solid green;
-}
-
-.b3 {
-  background-color: blue;
-  border: 1px solid blue;
-}
-
-.b4 {
-  background-color: purple;
-  border: 1px solid purple;
 }
 
 .header {
@@ -157,6 +141,10 @@
   background-color: white;
 }
 
+.text-primary {
+  color: var(--primary);
+}
+
 .footer {
   background-color: var(--gray-1);
   color: white;
@@ -168,6 +156,27 @@
   grid-template-columns: repeat(3, 350px);
   grid-auto-columns: repeat(3, 350px);
   gap: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 350px);
+    grid-auto-columns: repeat(2, 350px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: 350px;
+    grid-auto-columns: 350px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+  }
 }
 
 .elem {
@@ -211,5 +220,59 @@
   border: 1px solid var(--gray-2);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.recipe-title i {
+  font-size: 20px;
+}
+
+.b1 {
+  background-color: red;
+  border: 1px solid red;
+}
+
+.b2 {
+  background-color: green;
+  border: 1px solid green;
+}
+
+.b3 {
+  background-color: blue;
+  border: 1px solid blue;
+}
+
+.b4 {
+  background-color: purple;
+  border: 1px solid purple;
+}
+
+@media screen and (max-width: 576px) {
+  .xs {
+    border: 2px solid red;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .sm {
+    border: 2px solid green;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .md {
+    border: 2px solid blue;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .md-lt {
+    border: 2px solid orange;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .xl {
+    border: 2px solid purple;
+  }
 }
 /*# sourceMappingURL=index.css.map */

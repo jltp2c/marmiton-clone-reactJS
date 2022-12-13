@@ -1,14 +1,23 @@
 import React from 'react';
-import recipe from "../assets/img/recette.png"
+import {useState} from 'react'
+ 
+function Recipe({title, image}) {
 
-function Recipe() {
+  const [liked,setLiked] = useState(false)
+
+  function handleClick(){
+    setLiked(!liked)
+  }
+
+
   return (
-    <div className='recipe'>
+    <div onClick={handleClick} className='recipe'>
         <div className='image-container'>
-            <img src={recipe} alt="recipe" />
+            <img src={image} alt="recipe" />
         </div>
-        <div className='recipe-title d-flex flex-row justify-content-center align-items-center'>
-            <h3>Poulet Champignon</h3>
+        <div className='recipe-title d-flex flex-column justify-content-center align-items-center'>
+            <h3 className='mb-10'>{title}</h3>
+            <i className={`fa-solid fa-heart ${liked? "text-primary": ""}`}></i>
         </div>
     </div>
   )

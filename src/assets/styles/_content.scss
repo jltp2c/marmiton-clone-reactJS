@@ -1,10 +1,30 @@
+
 .grid{
     display: grid;
     place-content: center;
     grid-template-columns: repeat(3, 350px);
     grid-auto-columns: repeat(3,350px);
     gap: 20px;
-}
+    @media screen and(max-width: 1200px) {
+      grid-template-columns: repeat(2, 350px);
+      grid-auto-columns: repeat(2, 350px);
+    }
+    
+    @media screen and(max-width: 992px) {
+      grid-template-columns: 350px;
+      grid-auto-columns: 350px;
+    }
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      grid-auto-columns: 1fr;
+    }
+  }
+
+    
+
+   
+    
+    
 
 .elem{
     border: 1px solid red;
