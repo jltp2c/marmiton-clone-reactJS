@@ -11,6 +11,10 @@
   background-color: var(--gray-2);
 }
 
+input {
+  font-family: var(--font-family);
+}
+
 :root {
   --primary: #ff8b48 ;
   --gray-1: #2f3542;
@@ -76,6 +80,14 @@
   width: 100%;
 }
 
+.calc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 .d-flex {
   display: flex;
 }
@@ -102,6 +114,8 @@
 
 .header {
   padding: 10px 20px;
+  position: relative;
+  height: 58px;
   background-color: white;
   box-shadow: var(--box-shadow-nav);
   color: var(--primary);
@@ -111,6 +125,48 @@
   width: 50px;
   height: 50px;
   border-radius: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  .headerList {
+    display: none;
+  }
+}
+
+.headerXs {
+  display: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.headerXs:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 576px) {
+  .headerXs {
+    display: block;
+  }
+}
+
+.menuContainer {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  width: 200px;
+}
+
+.menuContainer li {
+  padding: 10px 5px;
+  list-style-type: none;
+  border-radius: 20px;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.menuContainer li:hover {
+  background-color: var(--primary);
+  color: white;
 }
 
 .btn {
@@ -185,7 +241,19 @@
 }
 
 .content-card {
-  width: 1130px;
+  max-width: 1130px;
+  width: 100%;
+}
+
+.searchBar {
+  padding: 10px 15px;
+  border: 2px solid var(--gray-2);
+  border-radius: 20px;
+}
+
+.searchBar input {
+  outline: 0;
+  border: 0;
 }
 
 .recipe {
