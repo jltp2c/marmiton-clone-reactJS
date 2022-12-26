@@ -1,7 +1,10 @@
-import Content from "./components/Content";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Content from "./pages/Homepage/Content";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import styles from './App.module.css';
+// import {Seed} from './data/Seed'
+
+// Seed()
 
 function App() {
   return (

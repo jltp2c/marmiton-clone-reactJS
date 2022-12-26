@@ -1,5 +1,5 @@
 import { useState } from "react";
-import cookChef from "../assets/img/cookchef.png" ;
+import cookChef from "../../assets/img/cookchef.png" ;
 import HeaderMenu from "./HeaderMenu";
 
 function Header() {

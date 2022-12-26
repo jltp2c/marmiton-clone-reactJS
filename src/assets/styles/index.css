@@ -256,6 +256,11 @@ input {
   border: 0;
 }
 
+.small {
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .recipe {
   border-radius: 20px;
   height: 400px;
@@ -341,6 +346,21 @@ input {
 @media screen and (min-width: 1201px) {
   .xl {
     border: 2px solid purple;
+  }
+}
+
+.spinne {
+  font-size: 40px;
+  color: var(--primary);
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=index.css.map */
