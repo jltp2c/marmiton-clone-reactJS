@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ApiContext } from '../../context/ApiContext';
 
-function Recipe({recipe : {liked,title,image,_id}, toggleLikedRecipe}) {
+function Recipe({recipe : {liked,title,image,_id}, toggleLikedRecipe, deleteRecipe}) {
 
 
   const BASE_API = useContext(ApiContext)
@@ -29,8 +29,21 @@ function Recipe({recipe : {liked,title,image,_id}, toggleLikedRecipe}) {
    }
   }
 
+  async function handlClickDelete(e){
+    e.stopPropagation();
+    try{
+      const response = await fetch(`${BASE_API}/${_id}`, {method:'DELETE'});
+      if(response.ok){
+        deleteRecipe(_id)
+      }
+    }catch(e){
+      console.log('error')
+    }
+  }
+
   return (
     <div onClick={handleClick} className='recipe'>
+      <i onClick={handlClickDelete} class="fa-sharp fa-solid fa-xmark"></i>
         <div className='image-container'>
             <img src={image} alt="recipe" />
         </div>

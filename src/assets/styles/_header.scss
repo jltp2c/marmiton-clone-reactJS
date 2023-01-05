@@ -5,8 +5,10 @@
     background-color: white;
     box-shadow: var(--box-shadow-nav);
     color: var(--primary);
+    
     .logo{
         img{
+            cursor: pointer;
             width: 50px;
             height: 50px;
             border-radius: 30px;
@@ -37,7 +39,7 @@
     position: absolute;
     top: 45px;
     right: 10px;
-    width: 200px;
+    width: 300px;
     li{
         padding: 10px 5px;
         list-style-type: none;
